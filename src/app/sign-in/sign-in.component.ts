@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Members } from '../Classes/members';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ShapeUpServiceService } from '../shape-up-service.service';
-import { Subscription } from 'rxjs';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-sign-in',
@@ -17,23 +17,32 @@ export class SignInComponent implements OnInit {
   constructor(private router: Router, private shapeUpService: ShapeUpServiceService) { 
     this.bool=false;
   }
-getBool(){
-  return this.bool;
-}
+  ngOnInit() {
+  }
+  getBool(){
+    return this.bool;
+  }
   getMembers(name:string, password:string){
-    debugger;
-  this.shapeUpService.getMember(name, password).subscribe(data=>{
-    this.currentM=data;
-  });
-  debugger;
-  if(this.currentM!=null){
-    debugger;
-    this.router.navigate(['./first-page']);
+      this.shapeUpService.GetMember(name, password).subscribe((res:Members) => {
+      console.log(res);
+      var data=res;
+      console.log(data);
+      this.currentM.id=data.id;
+      this.currentM.userName=data.userName;
+      this.currentM.userPassword=data.userName;
+      this.currentM.projects=data.projects;
+      this.currentM.accountDate=data.accountDate;
+      this.currentM.email=data.email;
+      console.log(this.currentM);
+    });
+    if(this.currentM!=null){
+      this.router.navigate(['./first-page']);
+    }
+    else{
+      this.bool=true;
+    }
   }
-  else{
-  this.bool=true;
-  }
+    
 }
-ngOnInit() {
-}
-}
+  
+

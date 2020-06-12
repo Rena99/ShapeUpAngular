@@ -14,6 +14,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { NewMemberComponent } from './NewAccount/new-member/new-member.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { DisplayResultComponent } from './display-result/display-result.component';
 
 const appRoutes: Routes = [
   {path: 'main-page', component:  MainPageComponent},
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
   {path: 'new-member', component:  NewMemberComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent },
   {path: 'welcome-page', component: WelcomePageComponent },
-  {path: '', redirectTo: 'welcome-page', pathMatch: 'full'}
+  //{path: '', redirectTo: 'welcome-page', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     ForgotPasswordComponent,
     NewMemberComponent,
     FirstPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    DisplayResultComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
