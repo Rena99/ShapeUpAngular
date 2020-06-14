@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent implements OnInit {
-
   currentM=new Members();
   constructor(private router: Router, private newMemberService:ShapeUpServiceService) { }
   chg=new Members();

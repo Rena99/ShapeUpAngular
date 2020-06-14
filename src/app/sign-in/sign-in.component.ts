@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Members } from '../Classes/members';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ShapeUpServiceService } from '../shape-up-service.service';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-sign-in',

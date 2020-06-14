@@ -15,6 +15,7 @@ import { NewMemberComponent } from './NewAccount/new-member/new-member.component
 import { FirstPageComponent } from './first-page/first-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DisplayResultComponent } from './display-result/display-result.component';
+import { DrawShapesComponent } from './draw-shapes/draw-shapes.component';
 
 const appRoutes: Routes = [
   {path: 'main-page', component:  MainPageComponent},
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     NewMemberComponent,
     FirstPageComponent,
     MainPageComponent,
-    DisplayResultComponent
+    DisplayResultComponent,
+    DrawShapesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

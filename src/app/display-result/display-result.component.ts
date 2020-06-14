@@ -67,17 +67,6 @@ export class DisplayResultComponent implements OnInit {
   constructor(@Inject(DOCUMENT) document, private resultService: ShapeUpServiceService) { 
   }
   Resize(area :Shapes) {
-    // for (var x = 0.5; x < 600; x += 10) {
-    //   this.ctx.moveTo(x, 0);
-    //   this.ctx.lineTo(x, 300);
-    // }
-    // for (var y = 0.5; y < 300; y += 10) {
-    //   this.ctx.moveTo(0, y);
-    //   this.ctx.lineTo(600, y);
-    // }
-    // this.ctx.strokeStyle = "#eee";
-    // this.ctx.stroke();
-    // this.ctx.save();
     let minX=0;
     let maxX=0;
     let minY=0;
@@ -126,17 +115,5 @@ export class DisplayResultComponent implements OnInit {
   ngOnInit() {
     this.ctx = this.canvas.nativeElement.getContext('2d');
     this.getShapes();
-
-    // this.canvas.addEventListener('mousedown', function(e) {
-    //   this.getCursorPosition(canvas, e)
-  //})
   }
-//   getCursorPosition(event){
-//     const x = event.clientX ;
-//     const y = event.clientY;
-//     console.log("x: " + (x-8) + " y: " + (y-3))
-// }
-
-
-
 }

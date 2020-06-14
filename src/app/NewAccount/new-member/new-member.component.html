@@ -7,7 +7,7 @@
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" id="name" 
                                     required
-                                    [(ngModel)]="model.name" name="name"
+                                    [(ngModel)]="model.userName" name="name"
                                     #name="ngModel">
                                     <div *ngIf="name.invalid &&  
                                             (name.touched||name.dirty)"
@@ -39,7 +39,7 @@
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" id="password" 
                                     required minlength="7" 
-                                    [(ngModel)]="model.password" name="password"
+                                    [(ngModel)]="model.userPassword" name="password"
                                     #password="ngModel">
                                     <div *ngIf="password.invalid &&  
                                             (password.touched||password.dirty)"
